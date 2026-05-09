@@ -20,15 +20,32 @@ Planned work, prioritized. Updated as the project evolves.
 - [x] Set up LLM Wiki system
 - [x] Research Karpathy LLM Wiki pattern
 - [x] Research RAG and vector databases
-- [~] Clarify project goals and scope
-- [ ] Evaluate LLM Wiki vs RAG vs hybrid for this project
-- [ ] Make architecture decision
+- [x] Clarify project goals and scope
+- [x] Evaluate LLM Wiki vs RAG vs hybrid for this project
+- [x] Make architecture decision
 
 ## Phase 2 — Project Definition (locked behind Phase 1)
 
-- [ ] Define target audience and use cases
-- [ ] Define what "academic knowledge base" means for this project
-- [ ] Identify initial source documents / data sources
+- [x] Define target audience and use cases
+- [x] Define what "academic knowledge base" means for this project
+- [x] Identify initial source documents / data sources
+
+## Phase 3 — Knowledge Base Design
+
+- [ ] Design concept page format for math/science (formulas, LaTeX, step-by-step)
+- [ ] Design curriculum topic taxonomy (subject → chapter → concept hierarchy)
+- [ ] Research Thai-capable embedding models
+- [ ] Define source authority and citation metadata schema
+- [ ] Design simulation linking strategy
+
+## Phase 4 — Content Ingestion (locked behind Phase 3)
+
+- [ ] Ingest IPST math textbooks
+- [ ] Ingest IPST physics textbooks
+- [ ] Ingest IPST biology textbooks
+- [ ] Ingest IPST chemistry textbooks
+- [ ] Ingest past exam papers (O-NET, PAT)
+- [ ] Supplement with international sources
 
 ## Phase 3 — Build (locked behind Phase 2)
 

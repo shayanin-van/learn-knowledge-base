@@ -2,9 +2,16 @@
 
 Table of contents for the knowledge base. Updated after every change.
 
-**Last updated**: 2026-05-08
+**Last updated**: 2026-05-09
 
 ---
+
+## Project
+
+| Page | Description |
+|---|---|
+| [[project-context]] | Company, target users, goals, and scope of the academic knowledge base project |
+| [[knowledge-base-architecture]] | Chosen architecture: hybrid curated wiki layer + RAG retrieval, and the rationale |
 
 ## Knowledge Base Approaches
 
