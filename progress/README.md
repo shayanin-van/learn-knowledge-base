@@ -3,14 +3,14 @@
 > **For the boss**: This file is the always-current summary of the project. Read this first.
 > For deeper detail: see `roadmap.md` (planned work), `ideas.md` (decisions log), and `sessions/` (per-session notes).
 
-**Last updated**: 2026-05-09
+**Last updated**: 2026-05-09 (session 2)
 
 ---
 
 ## Current Status
 
-**Phase**: Exploration & Research
-**Overall progress**: Project scope defined; architecture decision made. Ready to begin ingesting source materials.
+**Phase**: Exploration & Research (architecture re-evaluation complete)
+**Overall progress**: Architecture decision confirmed with deeper evidence. GraphRAG and Agentic RAG evaluated and rejected. Hybrid curated wiki + upgraded RAG confirmed. Ready to begin Phase 3.
 
 ---
 
@@ -31,21 +31,25 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 - Clarified full project scope, audience, and constraints in session 2026-05-09
 - Made the architecture decision: hybrid curated wiki + RAG
 - Created `project-context.md` and `knowledge-base-architecture.md` wiki pages
+- Deep-dive on GraphRAG and Agentic RAG (4 sources ingested + web research)
+- Confirmed architecture decision with stronger evidence; identified specific RAG layer upgrades
+- Created `graphrag.md`, `agentic-rag.md`, `rag-architecture-comparison.md` wiki pages
 
 ---
 
 ## Active Focus
 
-- Ready to ingest source documents (textbooks, exam papers) into `raw/`
+- Architecture decision confirmed. Ready to begin Phase 3 (Knowledge Base Design).
 
 ---
 
 ## Up Next
 
-- Add first source documents to `raw/` (IPST textbooks, past exam papers)
-- Design the concept page format for math/science content (formulas, LaTeX, step-by-step)
-- Explore Thai-capable embedding models for the vector index layer
+- Design concept page format for math/science content (formulas, LaTeX, step-by-step)
+- Research Thai-capable embedding models for the upgraded RAG layer
+- Choose RAG layer implementation: hierarchical indexing, hybrid search, query rewriting, contextual retrieval
 - Begin building the concept page taxonomy (curriculum topic hierarchy)
+- Add first source documents to `raw/` (IPST textbooks, past exam papers)
 
 ---
 
@@ -57,6 +61,9 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 | 2026-05-08 | Progress tracking system established in `progress/` | Needed a boss-readable record and future chatbot data source |
 | 2026-05-09 | Hybrid architecture: curated wiki + RAG | Pure RAG too unreliable for high-stakes student content; pure wiki too static for diverse sources. Quality comes from curation; RAG makes it queryable. |
 | 2026-05-09 | IPST/สสวท. as authoritative source; international as enrichment | IPST is the Thai national curriculum standard; must win when sources conflict |
+| 2026-05-09 (s2) | GraphRAG rejected | Designed for unstructured narrative data; underperforms standard RAG on math textbooks; brittle to updates; our wiki already IS a manual knowledge graph |
+| 2026-05-09 (s2) | Full Agentic RAG rejected | Compound error risk (95%/step → 60% over 10 steps); over-complex for direct student queries; high-stakes context requires predictability |
+| 2026-05-09 (s2) | RAG layer to adopt 4 Agentic RAG techniques | Hierarchical indexing, hybrid search (dense+BM25+RRF), query rewriting, contextual retrieval — proven improvements without agent complexity |
 
 ---
 

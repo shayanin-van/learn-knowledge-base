@@ -2,7 +2,7 @@
 
 Planned work, prioritized. Updated as the project evolves.
 
-**Last updated**: 2026-05-08
+**Last updated**: 2026-05-09
 
 ---
 
@@ -23,6 +23,8 @@ Planned work, prioritized. Updated as the project evolves.
 - [x] Clarify project goals and scope
 - [x] Evaluate LLM Wiki vs RAG vs hybrid for this project
 - [x] Make architecture decision
+- [x] Deep-dive on GraphRAG and Agentic RAG (architecture re-evaluation requested by owner)
+- [x] Confirm architecture decision with evidence: hybrid curated wiki + upgraded RAG layer
 
 ## Phase 2 — Project Definition (locked behind Phase 1)
 
@@ -34,7 +36,8 @@ Planned work, prioritized. Updated as the project evolves.
 
 - [ ] Design concept page format for math/science (formulas, LaTeX, step-by-step)
 - [ ] Design curriculum topic taxonomy (subject → chapter → concept hierarchy)
-- [ ] Research Thai-capable embedding models
+- [ ] Research Thai-capable embedding models (for upgraded RAG layer)
+- [ ] Choose and implement RAG layer upgrades: hierarchical indexing, hybrid search, query rewriting, contextual retrieval
 - [ ] Define source authority and citation metadata schema
 - [ ] Design simulation linking strategy
 
