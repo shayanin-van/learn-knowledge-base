@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "progress/sessions/2026-05-08.md",
+                "file": "wiki/knowledge-base-architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-08"
+              "title": "knowledge-base-architecture"
             }
           }
         ]
@@ -185,11 +185,16 @@
   },
   "active": "1cf387deaf541b62",
   "lastOpenFiles": [
-    "progress/ideas.md",
-    "progress/sessions/2026-05-08.md",
-    "wiki/log.md",
+    "wiki/karpathy-llm-wiki.md",
+    "wiki/index.md",
     "progress/roadmap.md",
     "progress/README.md",
+    "progress/ideas.md",
+    "progress/sessions/2026-05-09.md",
+    "wiki/knowledge-base-architecture.md",
+    "wiki/project-context.md",
+    "progress/sessions/2026-05-08.md",
+    "wiki/log.md",
     "CLAUDE.md",
     "wiki/vector-database.md",
     "CLAUDE.md.tmp.9996.1778254597309",
@@ -198,8 +203,6 @@
     "progress/ideas.md.tmp.9996.1778254569034",
     "progress",
     "wiki/rag.md",
-    "wiki/karpathy-llm-wiki.md",
-    "wiki/index.md",
     "wiki/log.md.tmp.9996.1778253980854",
     "wiki/vector-database.md.tmp.9996.1778253962163",
     "wiki/rag.md.tmp.9996.1778253941604"
