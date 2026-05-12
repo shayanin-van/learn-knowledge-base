@@ -2,9 +2,9 @@
 
 **Summary**: An AI architecture that enhances LLM responses by retrieving relevant documents from an external knowledge base at query time, grounding answers in real data without retraining the model.
 
-**Sources**: Web research (2025–2026). Key sources: Google Cloud, IBM, AWS, NVIDIA, RAGFlow blog.
+**Sources**: Web research (2025–2026). Key sources: Google Cloud, IBM, AWS, NVIDIA, RAGFlow blog. `raw/A Practical Approach to Retrieval Augmented Generation Systems/` (Allahyari & Yang).
 
-**Last updated**: 2026-05-08
+**Last updated**: 2026-05-12
 
 ---
 
@@ -41,6 +41,8 @@ LLMs have a fixed training cutoff and no access to private or proprietary data. 
 - **Retrieval noise** — irrelevant chunks can be retrieved and confuse the LLM
 - **Chunking problem** — splitting documents into chunks loses context; a question requiring synthesis across five chunks is harder to answer correctly
 - **Infrastructure overhead** — requires maintaining a vector database and embedding pipeline
+- **Lost in the Middle** — when many chunks are retrieved and passed as a long context, LLMs consistently ignore content in the middle of the context window. Performance peaks when relevant material is at the start or end of the context. This holds even with larger context windows. Fix: reorder retrieved documents before synthesis (see [[advanced-rag-techniques]]). (source: Liu et al. 2023)
+- **Chunk size is non-trivial** — there is no universally optimal chunk size; it depends on document type, query type, and the model. Too small loses context for generation; too large dilutes the embedding signal for retrieval. Requires empirical evaluation.
 
 The stateless limitation is the central critique in [[karpathy-llm-wiki]], which proposes a compiled wiki as an alternative.
 
@@ -66,3 +68,6 @@ As of 2025, RAG has solidified as a cornerstone of enterprise AI. Trends include
 
 - [[vector-database]]
 - [[karpathy-llm-wiki]]
+- [[rag-pipeline-implementation]]
+- [[advanced-rag-techniques]]
+- [[agentic-rag]]

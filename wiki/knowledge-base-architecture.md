@@ -2,9 +2,9 @@
 
 **Summary**: The chosen architecture for the academic knowledge base — a hybrid of curated wiki-style knowledge pages with RAG retrieval on top.
 
-**Sources**: Discussion with project owner (2026-05-09), [[karpathy-llm-wiki]], [[rag]], [[vector-database]].
+**Sources**: Discussion with project owner (2026-05-09), [[karpathy-llm-wiki]], [[rag]], [[vector-database]], `raw/A Practical Approach to Retrieval Augmented Generation Systems/` (Allahyari & Yang).
 
-**Last updated**: 2026-05-09
+**Last updated**: 2026-05-12
 
 ---
 
@@ -78,9 +78,21 @@ The knowledge base does not encode teaching style directly. Instead, pages are w
 
 The teaching style is configurable at the AI application layer (the dev team's responsibility), not baked into the knowledge base.
 
+## Additional Architectural Notes
+
+Known production concerns from the practical RAG literature, noted for Phase 3 design decisions:
+
+**Lost in the Middle mitigation**: When more than ~5 chunks are retrieved per query, the LLM tends to ignore middle-of-context chunks (Liu et al., 2023). The RAG layer should reorder retrieved chunks before synthesis — most relevant at top and bottom, least relevant in the middle. Low-cost, high-impact, should be built in from the start. (source: Allahyari & Yang; see [[advanced-rag-techniques]])
+
+**Hybrid retrieval validation**: Thai academic content has niche domain terminology and subject-specific names where exact keyword matching outperforms semantic retrieval. The practical literature explicitly identifies niche-domain jargon as a use case for hybrid (BM25 + semantic) over pure semantic. This validates the planned hybrid search upgrade in Phase 3. (source: Allahyari & Yang; see also [[agentic-rag]])
+
+**Two-layer architecture is formally validated**: The "Document Summary Index" (Dense Hierarchical Retrieval) described in the RAG literature is structurally identical to our architecture — curated concept pages as a high-level index, with fine-grained chunk retrieval within them. Our design independently matched a recognized best practice. (source: Y. Liu et al. 2021, Allahyari & Yang)
+
+**User history caching**: A school deployment where many students ask the same curriculum questions benefits from a vector-database-backed Q&A cache — significant cost and latency savings. Phase 4+ optimization, but worth planning for in infrastructure design.
+
 ## Open Questions
 
-- What embedding model handles Thai text well for the vector index? (multilingual-e5, OpenAI text-embedding-3, etc.)
+- What embedding model handles Thai text well for the vector index? (multilingual-e5, OpenAI text-embedding-3, mBERT — evaluate using MTEB leaderboard with Thai domain data)
 - How to structure concept pages for math — formulas, LaTeX, step-by-step derivations?
 - How will interactive simulations be linked — embedded metadata, separate index, or structured page section?
 - What is the update/maintenance workflow as new sources are added or curriculum changes?
@@ -91,3 +103,5 @@ The teaching style is configurable at the AI application layer (the dev team's r
 - [[karpathy-llm-wiki]]
 - [[rag]]
 - [[vector-database]]
+- [[advanced-rag-techniques]]
+- [[rag-pipeline-implementation]]

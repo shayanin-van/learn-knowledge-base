@@ -2,7 +2,7 @@
 
 Table of contents for the knowledge base. Updated after every change.
 
-**Last updated**: 2026-05-09 (session 2)
+**Last updated**: 2026-05-12 (session 3)
 
 ---
 
@@ -23,3 +23,5 @@ Table of contents for the knowledge base. Updated after every change.
 | [[graphrag]] | Microsoft's knowledge-graph-based RAG — how it works, where it excels (unstructured discovery), where it fails (structured curriculum content) |
 | [[agentic-rag]] | Agent-orchestrated multi-step retrieval — key techniques (hierarchical indexing, hybrid search, query rewriting) and what to borrow vs. avoid |
 | [[rag-architecture-comparison]] | Side-by-side analysis of Standard RAG, GraphRAG, Agentic RAG, and Hybrid Wiki+RAG against the Thai academic KB constraints |
+| [[rag-pipeline-implementation]] | Practical RAG pipeline — text extraction, splitting strategies, embedding model trade-offs, vector database options, generation component |
+| [[advanced-rag-techniques]] | Production-grade improvements: chunk decoupling, Lost in the Middle problem, hybrid retrieval merging strategies, query routing, user history caching |

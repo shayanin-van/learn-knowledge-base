@@ -4,6 +4,24 @@ Append-only record of all operations. Most recent entry at the top.
 
 ---
 
+## 2026-05-12 (session 3) — Practical RAG implementation book ingested
+
+**Source ingested**:
+- `raw/A Practical Approach to Retrieval Augmented Generation Systems/` — 5-chapter ebook (Allahyari & Yang): LLM background, RAG fundamentals, pipeline implementation, advanced RAG techniques, observability tools
+
+**Pages created**:
+- `rag-pipeline-implementation.md` — Two-stage pipeline (ingestion + query), text splitting trade-offs (character vs token), chunk size guidance, embedding model comparison and MTEB benchmark reference, vector database options, generation component patterns
+- `advanced-rag-techniques.md` — Chunk decoupling (Document Summary Index, Sentence Window), Lost in the Middle problem and reordering fix, hybrid retrieval merging strategies (RRF, concatenation, score-based), query rewriting (multilingual expansion, sub-queries), query routing, user history caching
+
+**Pages updated**:
+- `rag.md` — Added "Lost in the Middle" and "Chunk size is non-trivial" to limitations; added links to new pages
+- `knowledge-base-architecture.md` — Added "Additional Architectural Notes" section: LotM mitigation, hybrid retrieval validation, two-layer architecture formally validated, user history caching note; updated open question on embedding models to reference MTEB
+- `index.md` — Added two new pages
+
+**Key findings**: Our hybrid two-layer architecture independently matches the "Document Summary Index" (Dense Hierarchical Retrieval) technique from the literature — this is a validation. Lost in the Middle is a concrete production risk requiring document reordering. Hybrid retrieval (BM25 + semantic) is specifically recommended for niche-domain terminology, directly applicable to Thai academic content. Chunk size evaluation was flagged as important but deferred — outside current time constraints.
+
+---
+
 ## 2026-05-09 (session 2) — Architecture deep-dive: GraphRAG and Agentic RAG
 
 **Sources ingested**:

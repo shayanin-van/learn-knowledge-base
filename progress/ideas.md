@@ -2,7 +2,7 @@
 
 Running record of ideas explored and decisions made. Append-only — never delete entries.
 
-**Last updated**: 2026-05-08
+**Last updated**: 2026-05-12
 
 ---
 
@@ -74,3 +74,33 @@ Architecture re-evaluation complete. The original architecture decision (hybrid 
 The upgrade: RAG layer to use hierarchical indexing, hybrid search (dense + sparse with RRF), query rewriting, and contextual retrieval — all adopted from Agentic RAG research, without the agent orchestration overhead.
 
 **Status**: Confirmed 2026-05-09 (session 2). See `wiki/rag-architecture-comparison.md`.
+
+---
+
+## 2026-05-12 (session 3)
+
+### Architecture further validated by practical RAG literature
+Ingested "A Practical Approach to Retrieval Augmented Generation Systems" (Allahyari & Yang). Key validation: the "Document Summary Index" (Dense Hierarchical Retrieval) technique described in the literature is structurally identical to our hybrid two-layer architecture. We arrived at a recognized best practice independently.
+
+**Status**: Noted — no decision change required.
+
+---
+
+### New finding: "Lost in the Middle" production risk
+Research finding (Liu et al., 2023): LLMs consistently ignore context in the middle of long retrieved-context windows. Relevant chunks retrieved at positions 3–7 (out of 10) may be effectively invisible to the model. Fix: reorder documents before synthesis. This is a low-cost implementation step that should be built into the RAG layer from the start.
+
+**Status**: Added to `wiki/knowledge-base-architecture.md` as an architectural note. Not added to roadmap (already captured under "RAG layer upgrades" in Phase 3).
+
+---
+
+### Idea: Chunk size evaluation — deferred
+The practical literature shows chunk size is non-trivial and must be evaluated empirically using faithfulness + relevancy metrics. For Thai math/science content, standard defaults may not apply. However, owner confirmed this is outside current time constraints.
+
+**Status**: Deferred. Noted in `wiki/rag-pipeline-implementation.md` as a known concern. Not added to roadmap.
+
+---
+
+### Idea: User history caching for school deployment
+Students repeatedly ask the same curriculum questions. A vector-database-backed Q&A cache could bypass embedding + retrieval + LLM generation for repeated queries — significant cost and latency reduction at school scale.
+
+**Status**: Noted as Phase 4+ optimization. Added to `wiki/advanced-rag-techniques.md` and `wiki/knowledge-base-architecture.md`.

@@ -3,7 +3,7 @@
 > **For the boss**: This file is the always-current summary of the project. Read this first.
 > For deeper detail: see `roadmap.md` (planned work), `ideas.md` (decisions log), and `sessions/` (per-session notes).
 
-**Last updated**: 2026-05-09 (session 2)
+**Last updated**: 2026-05-12 (session 3)
 
 ---
 
@@ -34,6 +34,9 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 - Deep-dive on GraphRAG and Agentic RAG (4 sources ingested + web research)
 - Confirmed architecture decision with stronger evidence; identified specific RAG layer upgrades
 - Created `graphrag.md`, `agentic-rag.md`, `rag-architecture-comparison.md` wiki pages
+- Ingested practical RAG ebook (5 chapters); architecture validated against literature
+- Created `rag-pipeline-implementation.md` and `advanced-rag-techniques.md` wiki pages
+- Identified "Lost in the Middle" as a concrete production risk; added to architecture notes
 
 ---
 
