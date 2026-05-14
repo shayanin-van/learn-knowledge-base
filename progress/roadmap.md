@@ -34,12 +34,23 @@ Planned work, prioritized. Updated as the project evolves.
 
 ## Phase 3 — Knowledge Base Design
 
-- [ ] Design concept page format for math/science (formulas, LaTeX, step-by-step)
+- [x] Design concept page format for math/science (formulas, LaTeX, step-by-step)
 - [ ] Design curriculum topic taxonomy (subject → chapter → concept hierarchy)
 - [ ] Research Thai-capable embedding models (for upgraded RAG layer)
 - [ ] Choose and implement RAG layer upgrades: hierarchical indexing, hybrid search, query rewriting, contextual retrieval
 - [ ] Define source authority and citation metadata schema
 - [ ] Design simulation linking strategy
+
+## MVP Test — Simple Harmonic Motion (unlocked, next session)
+
+Goal: produce a small, complete knowledge base for one topic to support team testing of the chat feature.
+
+- [ ] Obtain company curriculum structure for the SHM chapter from project owner
+- [ ] Create concept pages for Simple Harmonic Motion and its prerequisite concepts
+- [ ] Validate concept page format against real content — refine format if needed
+- [ ] Confirm simulation linking approach for SHM simulation (MVP URL reference)
+
+---
 
 ## Phase 4 — Content Ingestion (locked behind Phase 3)
 

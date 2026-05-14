@@ -100,6 +100,31 @@ The practical literature shows chunk size is non-trivial and must be evaluated e
 
 ---
 
+## 2026-05-14 (session 4)
+
+### Decision: Concept page format — free-form content body
+Rejected a rigid section structure (Definition → Key formulas → Explanation) in favor of a fixed metadata shell with a free-form content body. Different concepts and subjects need different explanatory approaches. Pages can also include pedagogical framing, common misconceptions, and teaching notes — content that goes beyond academic facts and differentiates the AI from generic online sources.
+
+**Status**: Decided. See `wiki/concept-page-format.md`.
+
+---
+
+### Decision: IPST as conflict-resolution authority only
+IPST chapter structure does not dictate page organization or curriculum anchor. IPST's role is solely: when sources present conflicting academic facts, IPST takes precedence. Company curriculum structure is the organizational anchor. Conflicts noted inline in content body where they arise.
+
+**Status**: Decided. See `wiki/concept-page-format.md`.
+
+---
+
+### Decision: Parameterized URL references for simulation linking
+Even for the MVP (simple URL references), simulation links use a parameterized scheme (e.g., `?state=amplitude`) rather than bare links. This is forward-compatible with the long-term requirement: simulations may need to start in different states depending on the problem context the student is working on (e.g., simple harmonic motion starting at amplitude vs. equilibrium).
+
+Long-term stateful simulation strategy is still open — the URL parameter approach is the MVP placeholder.
+
+**Status**: MVP approach decided. Long-term approach deferred.
+
+---
+
 ### Idea: User history caching for school deployment
 Students repeatedly ask the same curriculum questions. A vector-database-backed Q&A cache could bypass embedding + retrieval + LLM generation for repeated queries — significant cost and latency reduction at school scale.
 

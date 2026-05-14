@@ -2,7 +2,7 @@
 
 Table of contents for the knowledge base. Updated after every change.
 
-**Last updated**: 2026-05-12 (session 3)
+**Last updated**: 2026-05-14 (session 4)
 
 ---
 
@@ -12,6 +12,12 @@ Table of contents for the knowledge base. Updated after every change.
 |---|---|
 | [[project-context]] | Company, target users, goals, and scope of the academic knowledge base project |
 | [[knowledge-base-architecture]] | Chosen architecture: hybrid curated wiki layer + RAG retrieval, and the rationale |
+
+## Knowledge Base Design
+
+| Page | Description |
+|---|---|
+| [[concept-page-format]] | Standard format for concept pages — fixed metadata shell, free-form content body, LaTeX, simulation linking |
 
 ## Knowledge Base Approaches
 

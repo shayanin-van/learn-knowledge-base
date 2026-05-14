@@ -3,14 +3,14 @@
 > **For the boss**: This file is the always-current summary of the project. Read this first.
 > For deeper detail: see `roadmap.md` (planned work), `ideas.md` (decisions log), and `sessions/` (per-session notes).
 
-**Last updated**: 2026-05-12 (session 3)
+**Last updated**: 2026-05-14 (session 4)
 
 ---
 
 ## Current Status
 
-**Phase**: Exploration & Research (architecture re-evaluation complete)
-**Overall progress**: Architecture decision confirmed with deeper evidence. GraphRAG and Agentic RAG evaluated and rejected. Hybrid curated wiki + upgraded RAG confirmed. Ready to begin Phase 3.
+**Phase**: Phase 3 — Knowledge Base Design (in progress)
+**Overall progress**: Concept page format designed and documented. One Phase 3 item complete; five remaining.
 
 ---
 
@@ -37,21 +37,23 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 - Ingested practical RAG ebook (5 chapters); architecture validated against literature
 - Created `rag-pipeline-implementation.md` and `advanced-rag-techniques.md` wiki pages
 - Identified "Lost in the Middle" as a concrete production risk; added to architecture notes
+- **Designed concept page format** — fixed metadata shell + free-form content body; LaTeX standard; parameterized simulation linking; IPST as conflict-resolution authority only
 
 ---
 
 ## Active Focus
 
-- Architecture decision confirmed. Ready to begin Phase 3 (Knowledge Base Design).
+Phase 3 — Knowledge Base Design. Concept page format complete. Next session: create SHM concept pages for team MVP testing.
 
 ---
 
 ## Up Next
 
-- Design concept page format for math/science content (formulas, LaTeX, step-by-step)
+- Design curriculum topic taxonomy (subject → chapter → concept hierarchy)
 - Research Thai-capable embedding models for the upgraded RAG layer
 - Choose RAG layer implementation: hierarchical indexing, hybrid search, query rewriting, contextual retrieval
-- Begin building the concept page taxonomy (curriculum topic hierarchy)
+- Define source authority and citation metadata schema
+- Design simulation linking strategy (long-term stateful approach)
 - Add first source documents to `raw/` (IPST textbooks, past exam papers)
 
 ---
@@ -67,12 +69,13 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 | 2026-05-09 (s2) | GraphRAG rejected | Designed for unstructured narrative data; underperforms standard RAG on math textbooks; brittle to updates; our wiki already IS a manual knowledge graph |
 | 2026-05-09 (s2) | Full Agentic RAG rejected | Compound error risk (95%/step → 60% over 10 steps); over-complex for direct student queries; high-stakes context requires predictability |
 | 2026-05-09 (s2) | RAG layer to adopt 4 Agentic RAG techniques | Hierarchical indexing, hybrid search (dense+BM25+RRF), query rewriting, contextual retrieval — proven improvements without agent complexity |
+| 2026-05-14 | Concept page format finalized | Free-form content body (not rigid sections); LaTeX standard; IPST as conflict-resolution only; prerequisites as wiki-links; parameterized simulation URLs |
 
 ---
 
 ## Open Questions
 
 - Which embedding model handles Thai text well? (multilingual-e5, OpenAI text-embedding-3, etc.)
-- How to represent math content in concept pages — LaTeX? MathML? Plain Thai descriptions?
-- How will interactive simulations be linked to concept pages?
+- Long-term stateful simulation linking strategy — how to pass context-dependent initial state to simulations?
+- Worked examples format — same page template or a different structure? (deferred)
 - What is the maintenance workflow for keeping pages current as curriculum changes?

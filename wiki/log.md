@@ -4,6 +4,26 @@ Append-only record of all operations. Most recent entry at the top.
 
 ---
 
+## 2026-05-14 (session 4) — Concept page format designed
+
+**Pages created**:
+- `concept-page-format.md` — Standard format for knowledge base concept pages: fixed metadata shell (summary, curriculum anchor, level, prerequisites, sources, last updated) + free-form content body + simulation block. Design rationale and field-level notes included.
+
+**Pages updated**:
+- `index.md` — Added "Knowledge Base Design" section with new page
+
+**Key decisions**:
+- Content body is free-form — author chooses structure per concept; rigid sections (Definition/Key formulas/Explanation) rejected as too prescriptive for diverse subjects and topics
+- One concept per page, one depth level per page — separate pages for different levels
+- LaTeX as the math notation standard (platform standard)
+- IPST is a conflict-resolution authority only, not a structural template — conflicts noted inline in content body, not in page header
+- Company curriculum structure used for curriculum anchor (not IPST chapter refs) — provided per chapter by project owner
+- Prerequisites as explicit wiki-links — enables concept dependency graph
+- Worked examples on separate pages (default, subject to revision)
+- Simulation block uses parameterized URL reference (e.g., `?state=amplitude`) to support stateful simulation linking in a future phase
+
+---
+
 ## 2026-05-12 (session 3) — Practical RAG implementation book ingested
 
 **Source ingested**:
