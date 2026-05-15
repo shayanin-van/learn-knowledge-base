@@ -3,14 +3,14 @@
 > **For the boss**: This file is the always-current summary of the project. Read this first.
 > For deeper detail: see `roadmap.md` (planned work), `ideas.md` (decisions log), and `sessions/` (per-session notes).
 
-**Last updated**: 2026-05-15 (session 5)
+**Last updated**: 2026-05-15 (session 8)
 
 ---
 
 ## Current Status
 
-**Phase**: Phase 3 — Knowledge Base Design (in progress)
-**Overall progress**: Concept page format designed and documented. One Phase 3 item complete; five remaining.
+**Phase**: MVP Test — SHM complete; Phase 3 items ongoing
+**Overall progress**: SHM chapter fully written (8 pages), all 5 source types ingested, images extracted and embedded. Next: per-page finetuning + simulation embeds.
 
 ---
 
@@ -27,36 +27,30 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 ## Recent Wins
 
 - Set up the LLM Wiki system (Claude Code as wiki maintainer)
-- Bootstrapped wiki with foundational knowledge on LLM Wiki, RAG, and vector databases
-- Clarified full project scope, audience, and constraints in session 2026-05-09
-- Made the architecture decision: hybrid curated wiki + RAG
-- Created `project-context.md` and `knowledge-base-architecture.md` wiki pages
-- Deep-dive on GraphRAG and Agentic RAG (4 sources ingested + web research)
-- Confirmed architecture decision with stronger evidence; identified specific RAG layer upgrades
-- Created `graphrag.md`, `agentic-rag.md`, `rag-architecture-comparison.md` wiki pages
-- Ingested practical RAG ebook (5 chapters); architecture validated against literature
-- Created `rag-pipeline-implementation.md` and `advanced-rag-techniques.md` wiki pages
-- Identified "Lost in the Middle" as a concrete production risk; added to architecture notes
-- **Designed concept page format** — fixed metadata shell + free-form content body; LaTeX standard; parameterized simulation linking; IPST as conflict-resolution authority only
-- **Updated simulation strategy** — two-phase: iframe for MVP testing, custom `simulation` JSON block for production
-- **Established `kb/` directory** — the actual academic KB layer, separate from research wiki; subject-level folder structure
+- Made architecture decision: hybrid curated wiki + RAG
+- Designed concept page format — fixed metadata shell + free-form content body; LaTeX; IPST as authority; two-phase simulation strategy
+- Established `kb/physics/` with CLAUDE.md, raw/, wiki/ structure
+- **SHM chapter complete** — 8 concept pages written, all 5 source types ingested:
+  - `shm-definition`, `shm-equations-graphs`, `shm-spring-mass`, `shm-spring-combinations`, `shm-pendulum`, `shm-natural-frequency-resonance`, `shm-energy` (Special Topic), `shm-other-forms` (เกินหลักสูตร)
+- **Tutor-style Thai standard** — language rules documented in `kb/physics/CLAUDE.md`; all pages reviewed
+- **Image extraction pipeline** — PyMuPDF renders OE Textbook pages as PNG; 7 images embedded across 6 wiki pages; `wiki/assets/` established
 
 ---
 
 ## Active Focus
 
-MVP Test — SHM. `kb/physics/` fully set up with source taxonomy, master record documented, Poppler installed. Next session: ingest all 5 SHM sources in order, then write concept pages.
+SHM MVP pages complete. Ready for per-page deep-dive: language finetuning + interactive simulation embeds (iframe Phase 1).
 
 ---
 
 ## Up Next
 
+- **Per-page finetuning** — review each SHM page for language polish, clarity, example quality
+- **Simulation embeds** — add iframe embed for applicable SHM pages (Phase 1)
+- **Image cropping** — finalize asset crops (user handling)
 - Design curriculum topic taxonomy (subject → chapter → concept hierarchy)
-- Research Thai-capable embedding models for the upgraded RAG layer
-- Choose RAG layer implementation: hierarchical indexing, hybrid search, query rewriting, contextual retrieval
-- Define source authority and citation metadata schema
-- Design simulation linking strategy (long-term stateful approach)
-- Add first source documents to `raw/` (IPST textbooks, past exam papers)
+- Research Thai-capable embedding models
+- Choose RAG layer implementation
 
 ---
 
@@ -72,6 +66,9 @@ MVP Test — SHM. `kb/physics/` fully set up with source taxonomy, master record
 | 2026-05-09 (s2) | Full Agentic RAG rejected | Compound error risk (95%/step → 60% over 10 steps); over-complex for direct student queries; high-stakes context requires predictability |
 | 2026-05-09 (s2) | RAG layer to adopt 4 Agentic RAG techniques | Hierarchical indexing, hybrid search (dense+BM25+RRF), query rewriting, contextual retrieval — proven improvements without agent complexity |
 | 2026-05-14 | Concept page format finalized | Free-form content body (not rigid sections); LaTeX standard; IPST as conflict-resolution only; prerequisites as wiki-links; parameterized simulation URLs |
+| 2026-05-15 | Tutor-style Thai as permanent language standard | Formal academic register alienates students; tutor voice makes content more accessible and engaging |
+| 2026-05-15 | Spring combinations → separate page | More navigable; students look up this topic independently |
+| 2026-05-15 | Images from OE sources only | Copyright boundary — OE Textbook is our own company's material |
 
 ---
 

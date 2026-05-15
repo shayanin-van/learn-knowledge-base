@@ -24,6 +24,10 @@ When the user adds a new source to `raw/` and asks you to ingest it:
 3. Create or update concept pages in `wiki/`
 4. Update `wiki/index.md` and append to `wiki/log.md`
 
+## Master record — tagging, not structure
+
+The master record is a **tagging system**. It is not a table of contents and its lesson/subtopic rows are not a blueprint for wiki pages. Always derive page structure from the sources and pedagogical needs. Apply master record tags to pages after their structure is decided — a page may cover multiple subtopic rows, or a subtopic may warrant splitting across finer pages.
+
 ## Concept page format
 
 Every concept page follows this structure:
@@ -35,7 +39,7 @@ Every concept page follows this structure:
 
 **Curriculum anchor**: [Company curriculum unit ref]
 
-**Level**: [e.g. ม.4]
+**Level**: [e.g. มัธยมปลาย — use the Grade label from the master record]
 
 **Prerequisites**: [[concept-a]], [[concept-b]]
 
@@ -48,6 +52,8 @@ Every concept page follows this structure:
 [Free-form content body — author decides the structure appropriate for this concept.
 May include: definitions, intuition, derivations, common misconceptions,
 pedagogical framing, teaching notes, IPST conflict notes inline where they appear, etc.]
+
+**Pedagogical principle — "what it feels like" first**: Where appropriate, open the content body with physical intuition before introducing formulas or derivations. Anchor to a concrete, tangible example first (e.g. a spring-cart, a pendulum, a real-world object). Build the mathematical framework as a consequence of that intuition — not as the opening statement. This principle applies whenever a concept has a natural physical image that students can connect to. It does not apply to purely mathematical or reference pages (e.g. equation summary pages).
 
 <!-- Simulation block — OPTIONAL, only include if a simulation exists -->
 ## Simulation
@@ -124,9 +130,27 @@ IPST/สสวท. is the conflict-resolution authority. When sources present co
 - If two sources disagree, note the contradiction explicitly
 - If a claim has no source, mark it: `(source: needs verification)`
 
+## Language and tone
+
+Write like **ติวเตอร์ที่สอนเก่งมาก** — a skilled private tutor explaining to a student, not a formal textbook. Concretely:
+
+- **Avoid academic register words** that students don't use in conversation. Banned words and replacements:
+  - `อนุมาน` → `หา`, `สร้างสมการ`, `ขั้นตอน`
+  - `ลักษณะเฉพาะ (defining characteristic)` → `สมบัติที่โดดเด่นที่สุด`
+  - `เปรียบเทียบกับสมการ...` → `เมื่อเทียบกัน:`
+  - `ปรากฏการณ์นี้เกิดขึ้นเพราะ` → `เหตุผลคือ`
+  - `ข้อควรระวัง` → `จุดที่สับสนบ่อย`
+  - `หมายเหตุ` → use a plain conversational sentence instead
+
+- **Don't over-focus on experiments.** Lab activities and experimental protocols are for school classrooms. Our pages are tutor-style — skip procedural experiment descriptions unless needed to build intuition.
+
+- **Use active, direct sentences.** Prefer "กฎข้อสองบอกว่า..." over "จากกฎการเคลื่อนที่ข้อสองของนิวตัน...". Imagine saying it out loud to a student.
+
+- **Misconception tables** use the ❌/✅ format (two columns: wrong belief on the left, correct understanding on the right).
+
 ## Rules
 
 - Never modify anything in `raw/`
 - Always update `wiki/index.md` and `wiki/log.md` after any change
 - Keep page names lowercase with hyphens
-- Write in clear, plain language suitable for high school students
+- **Write all concept page content in Thai**, with English technical terms introduced in parentheses on first use, e.g., "การสั่นพ้อง (resonance)". After the first introduction, use the Thai term. The only other exceptions are LaTeX math, source filenames in citations, and wiki-link targets (page names stay lowercase with hyphens).

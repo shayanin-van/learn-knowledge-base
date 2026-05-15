@@ -41,7 +41,7 @@ Planned work, prioritized. Updated as the project evolves.
 - [ ] Define source authority and citation metadata schema
 - [ ] Design simulation linking strategy
 
-## MVP Test — Simple Harmonic Motion (in progress)
+## MVP Test — Simple Harmonic Motion
 
 Goal: produce a small, complete knowledge base for one topic to support team testing of the chat feature.
 
@@ -49,10 +49,14 @@ Goal: produce a small, complete knowledge base for one topic to support team tes
 - [x] Establish `kb/physics/` directory with CLAUDE.md, raw/, wiki/ structure
 - [x] Define source type taxonomy and ingest order
 - [x] Install Poppler — PDF reading with images now working
-- [ ] Ingest all 5 SHM source types and discuss takeaways
-- [ ] Create concept pages for Simple Harmonic Motion
-- [ ] Validate concept page format against real content — refine if needed
-- [ ] Confirm simulation linking approach for SHM (iframe Phase 1)
+- [x] Ingest all 5 SHM source types — S-Map, IPST Textbook, Teacher Manual, OE Textbook, International Textbook
+- [x] Create concept pages for Simple Harmonic Motion — 8 pages complete
+- [x] Validate and refine concept page format against real content — tutor-style language standard documented
+- [x] Extract and embed OE Textbook images — 7 images in 6 pages
+- [~] Finalize image crops (user handling)
+- [ ] Per-page finetuning — language polish, example quality, clarity
+- [ ] Add interactive simulation embeds (iframe Phase 1) to applicable SHM pages
+- [ ] Confirm simulation linking approach — identify which simulations exist for SHM topics
 
 ---
 

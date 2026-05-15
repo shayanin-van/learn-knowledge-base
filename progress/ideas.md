@@ -6,6 +6,38 @@ Running record of ideas explored and decisions made. Append-only — never delet
 
 ---
 
+### 2026-05-15 (sessions 6–8) — Tutor-style Thai as language standard
+
+**Decision**: All physics wiki pages must be written like a skilled private tutor (ติวเตอร์ที่สอนเก่งมาก), not a formal textbook. Specific banned words and replacements documented in `kb/physics/CLAUDE.md`.
+
+**Rationale**: Formal academic register (อนุมาน, ลักษณะเฉพาะ, ข้อควรระวัง) is alienating for students. Tutor voice is more accessible, more memorable, and better matches the use case of a homework/exam AI companion. This came from direct user feedback during content review.
+
+**Scope**: Permanent standard for all content under `kb/physics/`. Should be extended to other subjects when those are established.
+
+---
+
+### 2026-05-15 (sessions 6–8) — Images from OE sources only
+
+**Decision**: Extract and embed images only from `[OE-Textbook]` sources. Do not extract from IPST Textbook, International Textbook, or any other source.
+
+**Rationale**: OE Textbook is the company's own material — no copyright concerns. IPST and international sources are third-party; extracting and embedding their diagrams in a product KB is a copyright risk.
+
+**Implementation**: Use PyMuPDF (fitz) to render PDF pages as PNG at 2× zoom. Store in `wiki/assets/`. Embed with markdown `![alt](assets/filename.png)`.
+
+---
+
+### 2026-05-15 — Pedagogical principle: "what it feels like" first
+
+**Decision**: Concept pages should open with physical intuition before formulas or derivations. Anchor to a concrete, tangible example first. Build math as a consequence — not as the opening statement.
+
+**Rationale**: Established from the SHM definition page. Starting with $a = -\omega^2x$ is mathematically correct but too abstract as an opening for students. Leading with the spring-cart image and the idea of "oscillation around equilibrium" gives students a mental model to hang the math on.
+
+**Scope**: Applies where a concept has a natural physical image. Does not apply to equation summary or reference pages.
+
+**Recorded in**: `kb/physics/CLAUDE.md` — free-form content body section.
+
+---
+
 ## 2026-05-08
 
 ### Idea: Progress tracking as a future chatbot data source

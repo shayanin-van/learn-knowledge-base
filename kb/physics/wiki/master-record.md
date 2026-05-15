@@ -39,6 +39,8 @@ If a page covers multiple subtopics, list each on its own line.
 
 ## SHM unit — full tag list
 
+> **This table is NOT a page outline.** Do not use lesson groupings as a blueprint for wiki pages. Derive page structure from the sources and pedagogical needs first. Apply these tags to pages after their structure is decided.
+
 Rows 97–106 in `physics-master-tag.csv`:
 
 | Row | Lesson | Subtopic |
