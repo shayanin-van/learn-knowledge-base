@@ -2,7 +2,7 @@
 
 Planned work, prioritized. Updated as the project evolves.
 
-**Last updated**: 2026-05-09
+**Last updated**: 2026-05-15
 
 ---
 
@@ -41,14 +41,18 @@ Planned work, prioritized. Updated as the project evolves.
 - [ ] Define source authority and citation metadata schema
 - [ ] Design simulation linking strategy
 
-## MVP Test — Simple Harmonic Motion (unlocked, next session)
+## MVP Test — Simple Harmonic Motion (in progress)
 
 Goal: produce a small, complete knowledge base for one topic to support team testing of the chat feature.
 
-- [ ] Obtain company curriculum structure for the SHM chapter from project owner
-- [ ] Create concept pages for Simple Harmonic Motion and its prerequisite concepts
-- [ ] Validate concept page format against real content — refine format if needed
-- [ ] Confirm simulation linking approach for SHM simulation (MVP URL reference)
+- [x] Obtain company curriculum structure for the SHM chapter (master record CSV ingested)
+- [x] Establish `kb/physics/` directory with CLAUDE.md, raw/, wiki/ structure
+- [x] Define source type taxonomy and ingest order
+- [x] Install Poppler — PDF reading with images now working
+- [ ] Ingest all 5 SHM source types and discuss takeaways
+- [ ] Create concept pages for Simple Harmonic Motion
+- [ ] Validate concept page format against real content — refine if needed
+- [ ] Confirm simulation linking approach for SHM (iframe Phase 1)
 
 ---
 

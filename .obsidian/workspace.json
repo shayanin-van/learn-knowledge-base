@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "progress/roadmap.md",
+                "file": "progress/sessions/2026-05-15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "roadmap"
+              "title": "2026-05-15"
             }
           }
         ]
@@ -185,20 +185,33 @@
   },
   "active": "39480c7b91662e58",
   "lastOpenFiles": [
-    "progress/sessions/2026-05-14.md.tmp.35016.1778755806823",
+    "kb/physics/wiki/source-types.md",
+    "progress/README.md.tmp.21704.f321d46ea0ff",
+    "progress/roadmap.md.tmp.21704.dd921af1604b",
+    "progress/roadmap.md.tmp.21704.948d5e718c94",
+    "progress/sessions/2026-05-15.md",
+    "progress/sessions/2026-05-15.md.tmp.21704.20ede783d18f",
+    "kb/physics/wiki/index.md",
+    "kb/physics/wiki/master-record.md",
+    "kb/physics/CLAUDE.md",
+    "kb/physics/raw/SHM/[IPST-Textbook]-SHM.pdf",
+    "kb/physics/wiki/log.md.tmp.38048.44c3584f4907",
+    "kb/physics/wiki/index.md.tmp.38048.d19b9806689b",
+    "kb/physics/wiki/source-types.md.tmp.38048.fde379f4ac71",
+    "kb/physics/CLAUDE.md.tmp.38048.1fb1be5aabad",
+    "kb/physics/raw/SHM/[OE-Textbook]-SHM.pdf",
+    "kb/physics/wiki/log.md",
+    "kb/log.md",
+    "kb/index.md",
+    "progress/README.md",
+    "wiki/log.md",
     "wiki/concept-page-format.md",
-    "wiki/concept-page-format.md.tmp.35016.1778755603548",
-    "wiki/concept-page-format.md.tmp.35016.1778755598470",
+    "progress/roadmap.md",
     "wiki/knowledge-base-architecture.md",
     "raw/A Practical Approach to Retrieval Augmented Generation Systems/A Practical Approach to Retrieval Augmented Generation Systems - 1 Introduction.md",
-    "progress/roadmap.md",
-    "progress/README.md",
     "progress/ideas.md",
     "progress/sessions/2026-05-14.md",
     "progress/sessions/2026-05-09-session2.md",
-    "progress/README.md.tmp.35016.1778755115305",
-    "progress/README.md.tmp.35016.1778755109337",
-    "wiki/log.md.tmp.35016.1778755071681",
     "progress/sessions/2026-05-12.md",
     "raw/A Practical Approach to Retrieval Augmented Generation Systems/A Practical Approach to Retrieval Augmented Generation Systems - 4  From Simple to Advanced RAG.md",
     "raw/A Practical Approach to Retrieval Augmented Generation Systems/A Practical Approach to Retrieval Augmented Generation Systems - 5  Observability Tools for RAG.md",
@@ -206,20 +219,6 @@
     "raw/A Practical Approach to Retrieval Augmented Generation Systems/A Practical Approach to Retrieval Augmented Generation Systems - 2  Retrieval Augmented Generation (RAG).md",
     "wiki/advanced-rag-techniques.md",
     "Mehdi Allahyari.md",
-    "progress/sessions/2026-05-09.md",
-    "wiki/vector-database.md",
-    "wiki/karpathy-llm-wiki.md",
-    "wiki/index.md",
-    "wiki/graphrag.md",
-    "wiki/rag.md",
-    "progress/ideas.md.tmp.40648.1778556532750",
-    "wiki/rag-pipeline-implementation.md",
-    "progress/README.md.tmp.40648.1778556512760",
-    "wiki/index.md.tmp.40648.1778556472422",
-    "wiki/index.md.tmp.40648.1778556465122",
-    "wiki/knowledge-base-architecture.md.tmp.40648.1778556456913",
-    "raw/GraphRAG_Microsoft introduction.md",
-    "raw/GraphRAG_ A new approach for discovery using complex information.md",
-    "raw/A modular Agentic RAG built with LangGraph — learn Retrieval-Augmented Generation Agents in minutes..md"
+    "progress/sessions/2026-05-09.md"
   ]
 }

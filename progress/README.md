@@ -3,7 +3,7 @@
 > **For the boss**: This file is the always-current summary of the project. Read this first.
 > For deeper detail: see `roadmap.md` (planned work), `ideas.md` (decisions log), and `sessions/` (per-session notes).
 
-**Last updated**: 2026-05-14 (session 4)
+**Last updated**: 2026-05-15 (session 5)
 
 ---
 
@@ -38,12 +38,14 @@ An **academic knowledge base** for an AI companion that helps Thai students (pri
 - Created `rag-pipeline-implementation.md` and `advanced-rag-techniques.md` wiki pages
 - Identified "Lost in the Middle" as a concrete production risk; added to architecture notes
 - **Designed concept page format** — fixed metadata shell + free-form content body; LaTeX standard; parameterized simulation linking; IPST as conflict-resolution authority only
+- **Updated simulation strategy** — two-phase: iframe for MVP testing, custom `simulation` JSON block for production
+- **Established `kb/` directory** — the actual academic KB layer, separate from research wiki; subject-level folder structure
 
 ---
 
 ## Active Focus
 
-Phase 3 — Knowledge Base Design. Concept page format complete. Next session: create SHM concept pages for team MVP testing.
+MVP Test — SHM. `kb/physics/` fully set up with source taxonomy, master record documented, Poppler installed. Next session: ingest all 5 SHM sources in order, then write concept pages.
 
 ---
 

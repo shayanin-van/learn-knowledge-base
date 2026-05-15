@@ -2,7 +2,7 @@
 
 Running record of ideas explored and decisions made. Append-only — never delete entries.
 
-**Last updated**: 2026-05-12
+**Last updated**: 2026-05-15
 
 ---
 
@@ -122,6 +122,26 @@ Even for the MVP (simple URL references), simulation links use a parameterized s
 Long-term stateful simulation strategy is still open — the URL parameter approach is the MVP placeholder.
 
 **Status**: MVP approach decided. Long-term approach deferred.
+
+---
+
+## 2026-05-15 (session 5)
+
+### Decision: Simulation embedding — two-phase strategy
+Phase 1 (MVP/testing): `<iframe>` embed — instantly playable in chat without leaving the page. Testing platform supports raw HTML in markdown.
+Phase 2+ (production): custom `simulation` JSON code block, interpreted by a renderer on the chat platform. The renderer fetches the simulation from a dedicated sim repo and renders it inline. This approach is markdown-safe (production strips iframes for security), decoupled from specific URLs, and forward-compatible with parameterized initial state.
+JSON schema and sim repo structure deferred until the renderer is built.
+
+**Status**: Phase 1 decided. Phase 2 approach defined, schema deferred. See `wiki/concept-page-format.md`.
+
+---
+
+### Decision: `kb/` directory established as the actual academic KB layer
+Created `kb/` as the root of the academic concept pages — distinct from `wiki/` (which is the research wiki about this project). Structure: subject-level folders (`physics/`, `math/`, `biology/`, `chemistry/`) with a master `index.md` and `log.md`. One level of nesting chosen over deep taxonomy — the curriculum anchor field in page metadata encodes the chapter/unit hierarchy.
+
+Currently co-located with the research wiki in this repo for MVP convenience. Flagged for migration to a separate repo once the content layer matures.
+
+**Status**: Decided. `kb/` directory created.
 
 ---
 

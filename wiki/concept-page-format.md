@@ -4,7 +4,7 @@
 
 **Sources**: Design discussion with project owner (2026-05-14).
 
-**Last updated**: 2026-05-14
+**Last updated**: 2026-05-15
 
 ---
 
@@ -45,8 +45,18 @@ pedagogical framing, teaching notes, IPST conflict notes inline where they appea
 <!-- Simulation block is OPTIONAL — only include if a simulation exists for this concept -->
 ## Simulation
 
-<!-- MVP: URL reference with state parameters -->
-[simulation-id]: https://platform.url/sim/concept-name?state=default
+<!-- PHASE 1 (testing): iframe embed for instant in-chat playback -->
+<iframe src="https://platform.url/sim/concept-name?param=value" width="800" height="600" allowfullscreen></iframe>
+
+<!-- PHASE 2+ (production): replace with a JSON code block interpreted by the simulation renderer -->
+<!--
+```simulation
+{
+  "id": "concept-simulation-id",
+  "params": { "key": "value" }
+}
+```
+-->
 
 *Description of what the simulation demonstrates and relevant initial states.*
 
@@ -72,7 +82,11 @@ List all sources that informed the page. Mark IPST sources as authoritative. If 
 ### Simulation
 **Optional** — only included when a simulation exists for this concept. Omit the section entirely if there is no simulation.
 
-For the current MVP phase, a simple URL reference with optional state query parameters (e.g., `?state=amplitude`). The parameter-based scheme is intentional: it is designed to support stateful simulation linking in a future phase, where the simulation initial state depends on the problem context the student is working on. Do not use bare links.
+**Phase 1 (testing)**: `<iframe>` embed with URL + query parameters for instant in-chat playback. The testing platform supports raw HTML in markdown; production will not (iframes stripped for security). Use this only for MVP testing.
+
+**Phase 2+ (production)**: Replace the iframe with a `simulation` JSON code block. A custom renderer on the chat platform will interpret the block, fetch the simulation from a dedicated sim repo, and render it inline. This approach is markdown-safe, decoupled from any specific URL, and supports parameterized initial state. The exact schema (sim id, params format, repo structure) is to be defined when the sim renderer is built.
+
+The parameter-based approach in both phases is intentional: it is designed to support stateful simulation linking in a future phase, where the simulation initial state depends on the problem context the student is working on.
 
 ### Free-form content body
 No fixed sections are required. Choose the structure that best serves the concept. Examples of what may appear (not a checklist):

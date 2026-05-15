@@ -4,6 +4,15 @@ Append-only record of all operations. Most recent entry at the top.
 
 ---
 
+## 2026-05-15 (session 5) — Simulation block strategy updated
+
+**Pages updated**:
+- `concept-page-format.md` — Simulation block revised: Phase 1 (testing) uses `<iframe>` embed for instant in-chat playback; Phase 2+ (production) uses a `simulation` JSON code block interpreted by a custom renderer. Rationale: production platform strips iframes for security; JSON block approach is markdown-safe and decoupled from specific URLs. Field notes updated to document both phases and their trade-offs.
+
+**Key decision**: Two-phase simulation embedding strategy. iframe is MVP-only; the long-term approach will be a custom `simulation` code block referencing a simulation repo, with a renderer built on the chat platform side. Exact schema (sim id, params, repo structure) deferred until renderer is built.
+
+---
+
 ## 2026-05-14 (session 4) — Concept page format designed
 
 **Pages created**:
